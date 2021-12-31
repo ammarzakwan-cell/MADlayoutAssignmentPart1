@@ -19,13 +19,10 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text(title),
         ),
-        body: GridView.count(
-          primary: false,
-          padding: const EdgeInsets.all(20),
-          crossAxisSpacing: 20,
-          mainAxisSpacing: 20,
-          childAspectRatio: 3 / 2,
-          crossAxisCount: 2,
+        body: GridView(
+          padding: const EdgeInsets.all(10),
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2, crossAxisSpacing: 20, mainAxisSpacing: 20),
           children: <Widget>[
             Container(
               color: Colors.teal[200],
@@ -33,22 +30,18 @@ class MyApp extends StatelessWidget {
                 child: Column(
                   children: <Widget>[
                     Container(
-                      margin: EdgeInsets.only(top: 50.0, bottom: 10.0),
-                      child: RichText(
-                        text: TextSpan(
-                          children: [
-                            WidgetSpan(
-                              child: Icon(MdiIcons.powerPlug, size: 34),
-                            ),
-                            TextSpan(
-                              text: "Plug Ammar",
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Container(
                         margin: EdgeInsets.only(top: 20.0, bottom: 10.0),
+                        child: Column(
+                          children: [
+                            Icon(MdiIcons.powerPlug,
+                                size: 35, color: Colors.white),
+                            Text("Plug Ammar",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 20))
+                          ],
+                        )),
+                    Container(
+                        margin: EdgeInsets.only(top: 10.0, bottom: 10.0),
                         child: MyStatefulWidget()),
                   ],
                 ),
@@ -62,22 +55,18 @@ class MyApp extends StatelessWidget {
                 child: Column(
                   children: <Widget>[
                     Container(
-                      margin: EdgeInsets.only(top: 50.0, bottom: 10.0),
-                      child: RichText(
-                        text: TextSpan(
-                          children: [
-                            WidgetSpan(
-                              child: Icon(MdiIcons.garage, size: 34),
-                            ),
-                            TextSpan(
-                              text: "Garage Lights",
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Container(
                         margin: EdgeInsets.only(top: 20.0, bottom: 10.0),
+                        child: Column(
+                          children: [
+                            Icon(MdiIcons.garage,
+                                size: 35, color: Colors.white),
+                            Text("Garage Lights",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 20))
+                          ],
+                        )),
+                    Container(
+                        margin: EdgeInsets.only(top: 10.0, bottom: 10.0),
                         child: MyStatefulWidget()),
                   ],
                 ),
@@ -91,22 +80,17 @@ class MyApp extends StatelessWidget {
                 child: Column(
                   children: <Widget>[
                     Container(
-                      margin: EdgeInsets.only(top: 50.0, bottom: 10.0),
-                      child: RichText(
-                        text: TextSpan(
-                          children: [
-                            WidgetSpan(
-                              child: Icon(MdiIcons.gate, size: 34),
-                            ),
-                            TextSpan(
-                              text: "Gate Switch",
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Container(
                         margin: EdgeInsets.only(top: 20.0, bottom: 10.0),
+                        child: Column(
+                          children: [
+                            Icon(MdiIcons.gate, size: 35, color: Colors.white),
+                            Text("Gate Switch",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 20))
+                          ],
+                        )),
+                    Container(
+                        margin: EdgeInsets.only(top: 10.0, bottom: 10.0),
                         child: MyStatefulWidget()),
                   ],
                 ),
@@ -120,29 +104,17 @@ class MyApp extends StatelessWidget {
                 child: Column(
                   children: <Widget>[
                     Container(
-                      margin: EdgeInsets.only(top: 50.0, bottom: 10.0),
-                      child: RichText(
-                        text: TextSpan(
-                          children: [
-                            WidgetSpan(
-                              child: Icon(MdiIcons.bed, size: 34),
-                            ),
-                            TextSpan(
-                              text: "Bilik Hana",
-                            ),
-                          ],
-                        ),
-                      ),
-                      /*child: IconButton(
-                        icon: Icon(Icons.android),
-                        color: Colors.white,
-                        onPressed: () {
-                          print("You Pressed the icon!");
-                        },
-                      ),*/
-                    ),
-                    Container(
                         margin: EdgeInsets.only(top: 20.0, bottom: 10.0),
+                        child: Column(
+                          children: [
+                            Icon(MdiIcons.bed, size: 35, color: Colors.white),
+                            Text("Bilik Hana",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 20))
+                          ],
+                        )),
+                    Container(
+                        margin: EdgeInsets.only(top: 10.0, bottom: 10.0),
                         child: MyStatefulWidget()),
                   ],
                 ),
